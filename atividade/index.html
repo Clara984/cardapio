@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Sabor da Casa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🍴 Sabor da Casa</h1>
+    <button onclick="document.getElementById('pedido').scrollIntoView()">
+        Meu Pedido (<span id="qtd">0</span>)
+    </button>
+</header>
+
+<main>
+
+    <h2>Cardápio</h2>
+
+    <input id="busca" placeholder="Pesquisar produto...">
+
+    <div id="filtros">
+        <button onclick="filtrar('Todos')">Todos</button>
+        <button onclick="filtrar('Entradas')">Entradas</button>
+        <button onclick="filtrar('Prato Principal')">Pratos</button>
+        <button onclick="filtrar('Sobremesas')">Sobremesas</button>
+        <button onclick="filtrar('Bebidas')">Bebidas</button>
+        <button onclick="filtrar('Carta de Vinhos')">Vinhos</button>
+    </div>
+
+    <div id="produtos"></div>
+
+
+    <section id="pedido">
+
+        <h2>Meu Pedido</h2>
+
+        <div id="itens">Nenhum produto adicionado.</div>
+
+        <p>Subtotal: <b id="subtotal">R$ 0,00</b></p>
+
+        <label>
+            <input type="checkbox" id="garcom">
+            Adicionar 10% do garçom
+        </label>
+
+        <p>Taxa: <b id="taxa">R$ 0,00</b></p>
+        <h3>Total: <b id="total">R$ 0,00</b></h3>
+
+        <input id="nome" placeholder="Nome do cliente">
+        <input id="mesa" type="number" placeholder="Número da mesa">
+
+        <button id="finalizar">Finalizar pedido</button>
+
+    </section>
+
+</main>
+
+<footer>
+    Sabor da Casa © 2026
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
